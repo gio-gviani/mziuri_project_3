@@ -1,0 +1,9 @@
+.main-container {
+  width: 100%;
+  max-width: 1728px;
+  margin: 0 auto;
+}
+
+@import "../layout/header";
+@import "../pages/main_page";
+@import "../layout/footer";

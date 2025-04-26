@@ -1,0 +1,262 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+input,
+select:focus-visible {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1728px;
+  margin: 0 auto;
+}
+
+header .header-top-bar-bg {
+  background-color: #006937;
+}
+header .header-top-bar-bg .header-top-bar {
+  height: 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-paragraph {
+  color: #f3f0fa;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-weight: 400;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box {
+  display: flex;
+  gap: 10px;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown {
+  position: relative;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown button {
+  background-color: transparent;
+  border: none;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown button img {
+  width: 16px;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown button p {
+  display: inline-block;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown .dropdown-menu {
+  border: 0;
+  box-shadow: 1px 1px 10px -5px;
+  transform: translateY(45px) !important;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown .dropdown-menu .dropdown-item img {
+  width: 16px;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown .dropdown-menu .dropdown-item p {
+  display: inline-block;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #fafafa;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .dropdown .dropdown-menu .dropdown-item:hover p {
+  color: #006937;
+}
+header .header-top-bar-bg .header-top-bar .header-top-bar-switches-box .header-top-bar-switch-leng::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -4px;
+  width: 1px;
+  height: 50%;
+  background-color: white;
+}
+header .header-main-bar {
+  border-bottom: 1px solid #eaeaec;
+}
+header .header-main-bar .header-main-bar-box {
+  height: 86px;
+  align-items: center;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-logo img {
+  width: 200px;
+}
+header .header-main-bar .header-main-bar-box .header-main-search-bar-box {
+  border: 1px solid #92949f;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  height: 46px;
+}
+header .header-main-bar .header-main-bar-box .header-main-search-bar-box #header-main-search-bar-select {
+  border-radius: 10px;
+  margin-left: 10px;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+header .header-main-bar .header-main-bar-box .header-main-search-bar-box button {
+  border-radius: 4px;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+  padding: 0 24px;
+  background-color: #006937;
+  color: #fafafa;
+  margin-right: -1px;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+header .header-main-bar .header-main-bar-box .header-main-search-bar-box input {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta {
+  display: flex;
+  height: 31px;
+  gap: 20px;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta p {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+  font-weight: 500;
+  margin-top: 5px;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta span {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #222222;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta img {
+  width: 28px;
+  height: 28px;
+  margin-top: 3px;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta .header-main-bar-meta-account {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta .header-main-bar-meta-wishlist {
+  position: relative;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta .header-main-bar-meta-wishlist span {
+  position: absolute;
+  background-color: #dd3842;
+  color: white;
+  padding: 5px 7px;
+  border-radius: 50%;
+  right: 0px;
+  top: 4px;
+  transform: translate(50%, -50%);
+  scale: 0.9;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta .header-main-bar-meta-cart {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta .header-main-bar-meta-cart .header-main-bar-meta-cart-icon {
+  position: relative;
+  margin-right: 10px;
+}
+header .header-main-bar .header-main-bar-box .header-main-bar-meta .header-main-bar-meta-cart .header-main-bar-meta-cart-icon #cart-counter {
+  position: absolute;
+  background-color: #dd3842;
+  color: white;
+  padding: 5px 7px;
+  border-radius: 50%;
+  right: 0px;
+  top: 4px;
+  transform: translate(50%, -50%);
+  scale: 0.9;
+}
+header .header-navbar .header-navbar-categories .dropdown-submenu {
+  position: relative;
+}
+header .header-navbar .header-navbar-categories .dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  display: none;
+}
+header .header-navbar .header-navbar-categories .dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
