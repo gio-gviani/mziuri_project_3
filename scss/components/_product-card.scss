@@ -1,0 +1,96 @@
+.product-card {
+  background-color: $main-white;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  position: relative;
+  img {
+    width: 100%;
+    height: 241px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    scale: 0.9;
+    &:hover {
+      scale: 1;
+    }
+  }
+  h5 {
+    @include main-font;
+    color: $main-color;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  p {
+    @include main-font;
+    color: $main-gray;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  .product-card-reviews-box {
+    display: flex;
+    .product-card-reviews-icon {
+      height: 15px;
+      width: 15px;
+    }
+    p {
+      @include main-font;
+      color: $main-black;
+      font-size: 13px;
+      font-weight: 400;
+      margin-left: 5px;
+      margin-bottom: 0;
+    }
+  }
+  .product-card-price-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    span {
+      @include main-font;
+      color: $main-gray;
+      text-decoration: line-through;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    p {
+      @include main-font;
+      color: $main-black;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+  }
+  button {
+    @include main-font;
+    font-weight: 400;
+    border: 1px solid $main-color;
+    color: $main-color;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: $main-white;
+
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $main-color;
+      color: $main-white;
+    }
+  }
+  .product-card-sale {
+    position: absolute;
+    @include main-font;
+    top: 10px;
+    left: 10px;
+    background-color: $main-red;
+    color: $main-white;
+    padding: 5px 12px;
+  }
+}
