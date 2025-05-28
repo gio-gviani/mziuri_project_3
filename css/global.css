@@ -179,10 +179,88 @@ a {
   padding: 5px 12px;
 }
 
+.cart-section-product-card {
+  margin: 20px;
+  display: flex;
+  position: relative;
+  gap: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaec;
+}
+.cart-section-product-card img {
+  width: 20%;
+  margin: 20px;
+}
+.cart-section-product-card .cart-section-product-card-info-box h5 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #006937;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.cart-section-product-card .cart-section-product-card-info-box p {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #0c0c0d;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.cart-section-product-card .cart-section-product-card-info-box .cart-section-product-card-quantity-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #222222;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.cart-section-product-card .cart-section-product-card-info-box .cart-section-product-card-quantity-box button {
+  background-color: transparent;
+  font-size: 20px;
+}
+.cart-section-product-card .cart-section-product-card-remove-btn {
+  position: absolute;
+  right: 0px;
+  background-color: transparent;
+}
+.cart-section-product-card .cart-section-product-card-remove-btn svg {
+  margin: 0;
+  width: 20px;
+  color: beige;
+  transition: 0.5s;
+}
+.cart-section-product-card .cart-section-product-card-remove-btn:hover svg {
+  fill: #006937;
+}
+
 .main-container {
   width: 100%;
   max-width: 1728px;
   margin: 0 auto;
+}
+
+.opened-offcanvas {
+  width: 35% !important;
+  opacity: 1 !important;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
 }
 
 header .header-top-bar-bg {
@@ -430,6 +508,121 @@ header .header-navbar .header-navbar-box .header-navbar-sale-box p {
   color: #222222;
   margin-bottom: 0;
   align-self: center;
+}
+
+.cart-section {
+  display: flex;
+  opacity: 0;
+  width: 0%;
+  position: fixed;
+  height: 100vh;
+  right: 0px;
+  overflow-y: scroll;
+  top: 0px;
+  background-color: #fafafa;
+  transition: 0.5s;
+  flex-direction: column;
+  justify-content: start;
+  z-index: 1000;
+}
+.cart-section .cart-section-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f5f6;
+  padding: 15px;
+}
+.cart-section .cart-section-header button {
+  background-color: transparent;
+  width: 20px;
+  position: relative;
+  transition: 0.5s;
+}
+.cart-section .cart-section-header button .cart-section-close-btn-stick-1 {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  transform: rotate(225deg);
+  background-color: black;
+  transition: 0.5s;
+  left: 0px;
+}
+.cart-section .cart-section-header button .cart-section-close-btn-stick-2 {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transition: 0.5s;
+  transform: rotate(315deg);
+}
+.cart-section .cart-section-header button:hover div {
+  background-color: #006937;
+  transform: rotate(45deg);
+}
+.cart-section .cart-section-header button:hover .cart-section-close-btn-stick-2 {
+  transform: rotate(135deg);
+}
+.cart-section .cart-section-header h6 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-weight: 700;
+}
+.cart-section .cart-section-check-out-box {
+  display: flex;
+  margin-top: auto;
+  background-color: #f1f5f6;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+}
+.cart-section .cart-section-check-out-box .cart-section-check-out-sum-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.cart-section .cart-section-check-out-box .cart-section-check-out-sum-box p {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.cart-section .cart-section-check-out-box .cart-section-check-out-sum-box span {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 700;
+}
+.cart-section .cart-section-check-out-box .cart-section-view-cart-btn {
+  background-color: #000000;
+  color: #fafafa;
+  padding: 17px 0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+}
+.cart-section .cart-section-check-out-box .cart-section-check-out-btn {
+  background-color: #006937;
+  color: #fafafa;
+  padding: 17px 0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
 }
 
 .feature-products-section {
@@ -751,7 +944,7 @@ header .header-navbar .header-navbar-box .header-navbar-sale-box p {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #45474F;
+  color: #45474f;
   line-height: 27px;
   font-size: 14px;
   font-weight: 400;

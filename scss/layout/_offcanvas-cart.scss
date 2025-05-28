@@ -1,0 +1,111 @@
+.cart-section {
+  display: flex;
+  opacity: 0;
+  width: 0%;
+  position: fixed;
+  height: 100vh;
+  right: 0px;
+  overflow-y: scroll;
+  top: 0px;
+  background-color: $main-white;
+  transition: 0.5s;
+  flex-direction: column;
+  justify-content: start;
+  z-index: 1000;
+
+  .cart-section-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $sub-bg-gray;
+    padding: 15px;
+    button {
+      background-color: transparent;
+      width: 20px;
+      position: relative;
+      transition: 0.5s;
+      .cart-section-close-btn-stick-1 {
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        transform: rotate(225deg);
+        background-color: black;
+        transition: 0.5s;
+        left: 0px;
+      }
+      .cart-section-close-btn-stick-2 {
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        transition: 0.5s;
+        transform: rotate(315deg);
+      }
+      &:hover {
+        div {
+          background-color: $main-color;
+          transform: rotate(45deg);
+        }
+        .cart-section-close-btn-stick-2 {
+          transform: rotate(135deg);
+        }
+      }
+    }
+    h6 {
+      @include main-font;
+      font-weight: 700;
+    }
+  }
+  .cart-section-body {
+    .cart-section-products-list {
+    }
+  }
+  .cart-section-check-out-box {
+    display: flex;
+    margin-top: auto;
+    background-color: $sub-bg-gray;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+    .cart-section-check-out-sum-box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      p {
+        @include main-font;
+        color: $main-black;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      span {
+        @include main-font;
+        color: $main-black;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+    .cart-section-view-cart-btn {
+      background-color: #000000;
+      color: $main-white;
+      padding: 17px 0;
+      border-radius: 10px;
+      text-transform: uppercase;
+      @include main-font;
+      font-weight: 500;
+      text-align: center;
+      font-size: 14px;
+    }
+    .cart-section-check-out-btn {
+      background-color: $main-color;
+      color: $main-white;
+      padding: 17px 0;
+      border-radius: 10px;
+      text-transform: uppercase;
+      @include main-font;
+      font-weight: 500;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
