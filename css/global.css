@@ -625,6 +625,146 @@ header .header-navbar .header-navbar-box .header-navbar-sale-box p {
   font-size: 14px;
 }
 
+.popup {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  opacity: 0;
+  transition: 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: turquoise;
+  padding: 120px 20px;
+  background-image: url("../../img/global/bg_newsletterpopup_1920x.webp");
+  background-size: cover;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.popup .popup-close-btn {
+  z-index: 1000;
+  background-color: white;
+  padding: 20px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transition: 0.5s;
+  border-radius: 50%;
+  right: -50px;
+  top: -50px;
+}
+.popup .popup-close-btn .popup-close-btn-stick-1 {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  transform: rotate(225deg);
+  background-color: black;
+  transition: 0.5s;
+  left: 10px;
+}
+.popup .popup-close-btn .popup-close-btn-stick-2 {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transition: 0.5s;
+  transform: rotate(315deg);
+  left: 10px;
+}
+.popup .popup-close-btn:hover div {
+  background-color: #006937;
+  transform: rotate(45deg);
+}
+.popup .popup-close-btn:hover .popup-close-btn-stick-2 {
+  transform: rotate(135deg);
+}
+.popup .popup-info-box {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.popup .popup-info-box h4 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fafafa;
+  text-align: center;
+  line-height: 1;
+  font-weight: 500;
+}
+.popup .popup-info-box h1 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fafafa;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.popup .popup-info-box h5 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #92949f;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.popup .popup-info-box form input {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #222222;
+}
+.popup .popup-info-box form button {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fafafa;
+  background-color: #0c0c0d;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+.popup .popup-info-box form .popup-dont-show-checkbox-box {
+  margin-top: 20px;
+  display: block;
+}
+.popup .popup-info-box form .popup-dont-show-checkbox-box #popup-dontShow-checkbox {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 10px;
+}
+.popup .popup-info-box form .popup-dont-show-checkbox-box label {
+  display: inline-block;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fafafa;
+}
+
+.popup.active {
+  opacity: 1;
+}
+
 .feature-products-section {
   padding: 60px 0 20px 0;
   background-color: #eaeaec;
